@@ -1,0 +1,18 @@
+sudo: false
+language: node_js
+node_js:
+  - 10 # use nodejs v10 LTS
+cache: npm
+branches:
+  only:
+    - master # build master branch only
+script:
+  - hexo generate # generate static files
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8u4vos5EerpNDXxoaggQEbJGwEkSgGDuZr+zgaTU58V469ogBA5dE6IhHNWTLN8HZCXpX9Kex3ln1kfICKxJwqO3CWmDg35mSM+9eRnLBaBgKtbrraIZD56Ga+ybLBECSgM+cJ0DNB8Q7/9w53Y1REzrMvL8PKBfdTjRDH5wKCDGU7UkZ0hp1h7VSVcgKvM08L/bsgpEz6Dlth3Ioh0wVLa25uUdulHxVhHiumwlpiJ/xTYzQ1d8ITFk0P30/bQV174nYfxTcQ5lFgqMWQGm89sGhy14LgcPxFojjk5KmVZuljEr8dmjVw/kRw5aBnoO9Ee4sV2qg8xXGAMrb+hvI8S7lB86uEsLtNxJzuqP4jc+KL6Ut/PGhV6/4YVtOWuivboMTSwoTqj/sXSa/ZRuct8pOSKCSUA1UF9XVbogae4Ymb5nEZHunkygMD0tzZfdq4LnvX2Cysyhm7a0q24JkMjQgN+FIWXw9D19/xEDV6HQs9YTnhfdOT5e7Z+S4hkE= onily.code_sungbl_tsstt@outlook.com
+  keep-history: true
+  on:
+    branch: master
+  local-dir: public
