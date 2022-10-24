@@ -1,0 +1,15 @@
+p id="RunTime" style="color:DarkGray;"></p>
+               <script>
+var BootDate = new Date("2022/10/24 22:26:00");
+function ShowRunTime(id) {
+var NowDate = new Date();
+var RunDateM = parseInt(NowDate - BootDate);
+var RunDays = Math.floor(RunDateM/(24*3600*1000));
+var RunHours = Math.floor(RunDateM%(24*3600*1000)/(3600*1000));
+var RunMinutes = Math.floor(RunDateM%(24*3600*1000)%(3600*1000)/(60*1000));
+var RunSeconds = Math.round(RunDateM%(24*3600*1000)%(3600*1000)%(60*1000)/1000);
+var RunTime = RunDays + "天" + RunHours + "时" + RunMinutes + "分" + RunSeconds + "秒";
+document.getElementById(id).innerHTML = "sungbly的家已勉强坚持：" + RunTime;
+}
+setInterval("ShowRunTime('RunTime')", 1000);
+ </script>
