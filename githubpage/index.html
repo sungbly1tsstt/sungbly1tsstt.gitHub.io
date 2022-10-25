@@ -11,6 +11,8 @@ Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;
 a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);
 runtime_span.innerHTML="sungbly的家勉强坚持: "+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();</script>
 <div style="text-align:left;">
-<span>在：{number_format((microtime(true) - $_SERVER['_start_time']), 3)} 秒中完成渲染</span>
-<span>占用内存：{round((memory_get_usage() - $_SERVER['_memory_usage'])/1024/1024,2)} MB</span>
+<script>
+  <span>在：{number_format((microtime(true) - $_SERVER['_start_time']), 3)} 秒中完成渲染</span>
+  <span>占用内存：{round((memory_get_usage() - $_SERVER['_memory_usage'])/1024/1024,2)} MB</span>
+ </script>
 </div>
