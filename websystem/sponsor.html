@@ -3,6 +3,19 @@
   <iframe src="sponsor%20with%20alipay.html" style="width:320px;height:500px;"></iframe>
 </div>
 <script>
+  var i = 0;
+  if (i == 0){
+	  div1.width=350px;
+	  div1.height=500px;
+	  i = 1;
+  }
+  else{
+	  div1.width=0px;
+	  div1.height=0px;
+	  i=0;
+  }
+</script>
+<script>
 function divDisplayAndHide(obj, s) {
 
 var element = document.getElementById(obj);
