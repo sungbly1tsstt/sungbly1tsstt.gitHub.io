@@ -2,6 +2,43 @@
 <div id="div1">
   <iframe src="sponsor%20with%20alipay.html" style="width:500px;height:500px;"></iframe>
 </div>
+function divDisplayAndHide(obj, s) {
+
+var element = document.getElementById(obj);
+
+if (element.className == "display") {
+
+if (s == "隐藏") {
+
+element.className = "hide";
+
+}
+
+else {
+
+element.className = "display";
+
+}
+
+}
+
+else {
+
+if (s == "显示") {
+
+element.className = "display";
+
+}
+
+else {
+
+element.className = "hide";
+
+}
+
+}
+
+}
 <button class="custom-btn btn-3" onclick:><span>Sponsor</span></button>
 <style>
 button{
