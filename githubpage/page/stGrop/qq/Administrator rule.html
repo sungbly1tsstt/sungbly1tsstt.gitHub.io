@@ -1,0 +1,92 @@
+<!DOCTYPE>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>管理员规则（st粉丝群）||sungbly1tsstt的小家</title>
+    <link rel="shortcut icon" href="../../../../img/st.ico">
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <script type="text/javascript"><!---->
+        document.onselectstart = function (event){if(window.event){event = window.event;}try{var the = event.srcElement;if(!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){return false;}return true;}catch (e){return false;}if(window.event){event = window.event;}try{var the = event.srcElement;if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){return false;}return true;} catch (e) {return false;}if(window.event){event = window.event;}try{var the = event.srcElement;if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){return false;}return true;}catch (e){return false;}}
+        document.onkeydown = function(){if (window.event && window.event.keyCode == 116) {event.keyCode = 0;event.returnValue = false;}if (event.ctrlKey && window.event.keyCode==85){return false;}if (event.ctrlKey && window.event.keyCode==83){return false;}if(window.event && window.event.keyCode == 123) {window.location="about:blank";event.keyCode=0;event.returnValue=false;}if(window.event &&window.event.keyCode == 13) {window.event.keyCode = 505;}if(window.event && window.event.keyCode == 8) {alert(str+"\n。");window.event.returnValue=false;}}
+        document.body.onkeydown  = function(e){var keyCode = e.keyCode || e.which || e.charCode;var ctrlKey = e.ctrlKey || e.metaKey;if(ctrlKey && (keyCode == 83 || keyCode == 85 || keyCode == 73)) {e.preventDefault();return false;}else if(ctrlKey && (keyCode == 83 || keyCode == 85 || keyCode == 67)) {e.preventDefault();return false;}else if(keyCode && keyCode == 123){return false;}}
+        <!---->
+        //透明复制
+        document.body.oncopy = function() {layer.msg('<p style="font-weight: 700;">优梦技术虫（www.aoxix.com)<br>复制成功，若要转载请务必保留原文链接！</p>', function(){});};
+        
+        // 帧数
+        $('body').before('<div id="fps" style="z-index:10000;position:fixed;top:3;left:3;font-weight:bold;background-image: linear-gradient( 120deg, #f093fb 0%, #f5576c 100%);-webkit-background-clip: text;color: transparent;"></div>');
+        var showFPS = (function(){ 
+            var requestAnimationFrame =  
+                window.requestAnimationFrame || 
+                window.webkitRequestAnimationFrame || 
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame || 
+                function(callback) { 
+                    window.setTimeout(callback, 1000/60); 
+                }; 
+            var e,pe,pid,fps,last,offset,step,appendFps; 
+            fps = 0; 
+            last = Date.now(); 
+            step = function(){ 
+                offset = Date.now() - last; 
+                fps += 1; 
+                if( offset >= 1000 ){ 
+                last += offset; 
+                appendFps(fps); 
+                fps = 0; 
+                } 
+                requestAnimationFrame( step ); 
+            }; 
+            appendFps = function(fps){ 
+                $('#fps').html(fps+'FPS');
+            };
+            step();
+        })();
+        
+        // 夜间切换
+        $(".toggle-theme").click(function() {
+        var toggleThemeText = "白天模式";
+        if (!$("body").hasClass('dark-theme')) {
+        toggleThemeText = "夜间模式";
+        $("body").css("background-image","none");
+        }
+        layer.msg(toggleThemeText, {
+        time: 2000,
+        anim: 1
+        });
+        });
+        //进度条显示
+        $(window).scroll(function() {
+            var a = $(window).scrollTop(),
+            c = $(document).height(),
+            b = $(window).height();
+            scrollPercent = a / (c - b) * 100;
+            scrollPercent = scrollPercent.toFixed(1);
+            $("#percentageCounter").css({
+                width: scrollPercent + "%"
+            });
+        }).trigger("scroll");
+        
+        //动态标题 
+        var OriginTitile = document.title,
+        titleTime;
+        document.addEventListener("visibilitychange",
+        function() {
+            if (document.hidden) {
+                document.title = "(ﾉﾟ▽ﾟ)ﾉ别走啊qwq";
+                clearTimeout(titleTime)
+            } else {
+                document.title = "(*๓´╰╯`๓)你可算回来了！ " ;
+                titleTime = setTimeout(function() {
+                    document.title = OriginTitile
+                },
+                2000)
+            }
+        });
+        
+        </script>
+    <header>fs</header>
+    <div class="MainDiv"></div>
+</body>
