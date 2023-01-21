@@ -3,11 +3,36 @@ body{
     background-image: url('background1.jpg');
 }
 .HeightText{
-
+    text-align: center;
 }
 .MainDiv{
     box-shadow: 1px 1px 3px 3px #00ffee59;
+    background-color: #333333;
+    border-radius: var(--main-radius);
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+}
+.MainText{
+    color: #ffffff;
+}
+.RightDiv{
+    box-shadow: 1px 1px 3px 3px #000000;
     background-color: #ffffff;
     border-radius: var(--main-radius);
-    height: 100000px;
+    height: auto;
+    width: 483px;
+    border-radius: 10px;
+    z-index: 999999999;
+}
+@font-face {
+
+    font-family: "emojigui";
+    
+    src: url("seguiemj.ttf") format("truetype");
+}
+.imgtt{
+    height:auto;
+    width:auto;
 }
