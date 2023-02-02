@@ -67,7 +67,7 @@
         var UrlReg='^((http|https|thunder|qqdl|ed2k|Flashget|qbrowser|ftp|rtsp|mms)://)';
         if(!jump_url||!jump_url.match(UrlReg)){
             document.title='错误404，正在返回...';
-            jump_url=location.origin
+            jump_url=location.origin;
         }
         setTimeout(function link_jump(){ location.href=jump_url},1000);
         setTimeout(function(){window.opener=null;window.close()},30000);
@@ -76,7 +76,7 @@
 <body>
     <div class="loading">
         <div class="spinner-wrapper">
-            <div>
+            <div    >
                 <span class="spinner-text">正在跳转中...</span>
                 <span class="spinner"></span>
             </div>
