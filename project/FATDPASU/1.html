@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" lang="en">
+<!--
+    <script src="base64.min.js"></script>
+    <script src="GetUaType.js"></script>
+    <script>
+        function GetQueryString(name){
+            var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)","i");
+            var r=window.location.search.substr(1).match(reg);
+            return r?decodeURI(r[2]):null
+        }
+        function ok(){
+            var href64 = Base64.decode(GetQueryString("h"));
+            location.href(href64);
+        }
+        if(GetUaType1()!="" && getBroswer()!=""){
+            setTimeout(4000);
+            document.getElementById("startus") = "success!"
+            setTimeout(2000);
+            ok();
+        }
+    </script> -->
+    <title>FATDPASU v1.0</title>
+</head>
+<body>
+    <p>FATDPASU 1.0 by <a href="https://sungbly1tsstt.github.io">sungbly_tsstt</a><br><br></p>
+    <p id="startus">verifying</p>
+    <script src="GetUaType.js"></script>
+    <script>
+        function GetQueryString(name){
+            var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)","i");
+            var r=window.location.search.substr(1).match(reg);
+            return r?decodeURI(r[2]):null
+        }
+        function ok(){
+            var href64 = atob(GetQueryString("h"));
+            location.href = href64;
+        }
+        if(GetUaType1()!="" && getBroswer()!=""){
+            //setTimeout(document.getElementById("startus").innerHTML = "success!",4000);
+            document.getElementById("startus").innerHTML = "success!"
+            setTimeout(ok(),3000)
+        }
+    </script>
+</body>

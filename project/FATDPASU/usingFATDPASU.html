@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" lang="en">
+    <title>use FATDPASU™ on your project</title>
+</head>
+<body>
+    <script src="base64.min.js"></script>
+    <h1>use FATDPASU™ on your project</h1>
+    <p>tips:Two different html are required to jump to the verification page and the main page (or use server verification means such as recording ip)</p>
+    <p style="text-align: center;">
+        <table>
+            <tbody>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>
+                        Reorder:
+                    </td>
+                    <td><input id="reorder" style="border-color: #89cfeb;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <p style=" /*text-align: center;*/ "><button onclick="fx1();">creat FATDPASU™ url</button></p>
+    <p id="tips1"></p>
+    <div style="background-color: #5e5e5e;color: #ffffff;"><code id="code"></code></div>
+    <script>
+        function fx1(){
+            var reorder1 = document.getElementById("reorder");
+            log(reorder);
+            reorder1 = Base64.encode(reorder1);
+            document.getElementById("tips1").innerHTML = "Copy this html code on your page(Pleas look tips(on this page top))";
+            document.getElementById("code").innerHTML = "&lt;a href=&ldquo;/"+"/sungbly1tsstt.github.io/project/FATDPASU/1.html?h=" + reorder1 +"&rdquo;>&lt;button>&lt;pre>I not a script!I can visit!&lt;br>technical support provided by Sungbly FATDPASU.&lt;pre>&lt;button>&lta>";
+        }
+    </script>
+</body>

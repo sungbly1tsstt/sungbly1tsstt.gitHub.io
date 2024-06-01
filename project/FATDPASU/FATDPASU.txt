@@ -1,0 +1,1 @@
+FATDPASU is > Fully automatic test for distinguishing people and scripts without user operation
